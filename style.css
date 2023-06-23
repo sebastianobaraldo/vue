@@ -7,6 +7,9 @@
 body {
   font-family: Arial, sans-serif;
   background-color: lightslategray;
+}
+
+#root {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +23,7 @@ body {
   border-width: 3px;
 }
 
-input,
-button {
+input, button {
   margin-top: 10px;
 }
 

@@ -10,9 +10,11 @@
     <div id="root">
         <div class="box">
             <h1 id="titolo">Lista delle cose da fare</h1>
-            <input v-model="nuovaAttivita" placeholder="Aggiungi una nuova attività" @keyup.enter="aggiungiAttivita">
-            <button @click="aggiungiAttivita">AGGIUNGI</button>
-            <button @click="eliminaTutteAttivita">Cancella tutte le attività</button>
+            <div>
+                <input v-model="nuovaAttivita" placeholder="Aggiungi una nuova attività" @keyup.enter="aggiungiAttivita">
+                <button @click="aggiungiAttivita">AGGIUNGI</button>
+                <button @click="eliminaTutteAttivita">Cancella tutte le attività</button>
+            </div>
             <ul>
                 <li v-for="(attivita, index) in attivitaLista" :key="index">
                     <input type="checkbox" v-model="attivita.svolta">
