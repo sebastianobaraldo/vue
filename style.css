@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightslategray;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background-color: darkolivegreen;
+  padding: 10%;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+input, button {
+  margin-top: 10px;
+}
+
+li {
+  margin-top: 5px;
+}
+
+#titolo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+}
+
+.svolta {
+  text-decoration: line-through;
+  color: gray;
+}
