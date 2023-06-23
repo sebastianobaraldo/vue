@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue</title>
+    <title>Lista delle cose da fare</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    
+    <div id="root">
+        <div class="box">
+            <h1 id="titolo">Lista delle cose da fare</h1>
+            <input v-model="nuovaAttivita" placeholder="Aggiungi una nuova attività" @keyup.enter="aggiungiAttivita">
+            <button @click="aggiungiAttivita">AGGIUNGI</button>
+            <button @click="eliminaTutteAttivita">Cancella tutte le attività</button>
+            <ul>
+                <li v-for="(attivita, index) in attivitaLista" :key="index">
+                    <input type="checkbox" v-model="attivita.svolta">
+                    <span :class="{ 'svolta': attivita.svolta }">{{ attivita.testo }}</span>
+                    <button @click="eliminaAttivita(index)">❌</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
